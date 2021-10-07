@@ -14,13 +14,14 @@
 ## blue.example.com
 ## 192.168.100.1
 ## 192.168.100.10
-##ip-172-31-37-64.ap-south-1.compute.internal
-
-# Ex 2: A collection of hosts belonging to the 'webservers' group
 
  [webservers]
-172.31.33.211
 172.31.37.64
+172.31.43.231
+#[abc-com-apache-node]
+#172.31.43.231
+#[xyz-com-apache-node]
+#172.31.37.64
 ## alpha.example.org
 ## beta.example.org
 ## 192.168.1.100

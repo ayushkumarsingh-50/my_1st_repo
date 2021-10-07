@@ -1,6 +1,6 @@
 ---
-- name: "Play 1- cgi website configuration"  
-  hosts: localhost
+- name: "Play 1- trianz website configuration"  
+  hosts: webservers
   become: yes
   tasks:
     - name: "install git"

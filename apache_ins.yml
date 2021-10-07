@@ -1,0 +1,25 @@
+---
+
+- name: "Play 1 – httpd install"
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install important packages
+      yum:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - tree
+        - tar
+        - telnet
+        - bind-utils
+        - httpd
+      when: ansible_os_family == "RedHat"
+      tags: install
+
+    - name: service start
+      service:
+        name:  httpd
+        state: started
+      tags: service_started
+

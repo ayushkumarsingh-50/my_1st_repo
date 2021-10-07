@@ -1,0 +1,15 @@
+--- 
+- name: Play1
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: "loop  test"
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - httpd
+        - vim
+        - wget
+        - tree
+
